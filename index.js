@@ -4,7 +4,7 @@ const mongoose=require("mongoose");
 const app =express();
 const port = process.env.PORT || 5000
 const path =require("path");
-
+const cors =require("cors");
 const mongoDBconnect =require('./db');
 mongoDBconnect();
 
@@ -12,6 +12,7 @@ mongoDBconnect();
 
 
 app.use(express.json());
+app.use(cors());
 
 
 
